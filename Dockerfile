@@ -20,7 +20,8 @@ ADD pytorch_model_weights.pth .
 ADD pytorch_model.py . 
 ADD model.py .
 ADD mtailormodel.onnx .
-
+ADD test.py .
+ADD n01440764_tench.jpeg .
 
 
 
@@ -29,4 +30,5 @@ ADD app.py .
 
 EXPOSE 8000
 
-CMD python3 -u server.py
+CMD ["sh", "-c", "python server.py && python test.py"]
+
