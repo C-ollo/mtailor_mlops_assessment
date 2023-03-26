@@ -16,7 +16,7 @@ ADD server.py .
 
 # Add your model weight files 
 # (in this case we have a python script)
-ADD pytorch_model_weights .
+ADD pytorch_model_weights.pth .
 ADD model.py .
 ADD mtailormodel.onnx .
 
