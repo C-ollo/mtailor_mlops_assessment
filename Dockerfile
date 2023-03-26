@@ -21,6 +21,7 @@ ADD pytorch_model.py .
 ADD model.py .
 ADD mtailormodel.onnx .
 ADD test.py .
+ADD n01440764_tench.jpeg .
 
 
 
