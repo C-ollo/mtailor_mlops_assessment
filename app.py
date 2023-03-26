@@ -45,9 +45,8 @@ def inference(model_inputs):
     
 
     # Use the ONNX model to make a prediction
-    input_name = model.get_inputs()[0].name
-    #output_name = model.get_outputs()[0].name
-    output = model.run(None, {input_name: image})[0]
+    
+    output = model.run(None, {'input': image.unsqueeze(0).numpy()})
     predicted_class = np.argmax(output)
 
     # Convert the prediction to a JSON response
