@@ -16,11 +16,7 @@ def init():
     global model
 
     model_file = "mtailormodel.onnx"
-    if torch.cuda.is_available():
-        device = 0
-    else:
-        device = -1
-    model = onnxruntime.InferenceSession(model_file, providers=['CUDAExecutionProvider'] if device == 0 else [])
+    model = onnxruntime.InferenceSession(model_file)
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
