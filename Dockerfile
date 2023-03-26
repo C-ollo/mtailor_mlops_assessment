@@ -30,5 +30,5 @@ ADD app.py .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python server.py && python test.py"]
+CMD python3 -u server.py
 
